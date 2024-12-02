@@ -1,0 +1,31 @@
+{
+ "conv_layers": 4,
+ "sbf_dim": 7,
+ "rbf_dim": 16,
+ "in_channels": 128,
+ "embedding_size": 128,
+ "heads": 16,
+ "rbf_kernel": "bessel",
+ "cutoff": 5.0,
+ "input_file": "./raw/qm9_origin.xyz",
+ "target": 7,
+ "batch_size": 64,
+ "random_seed": 40,
+ "division": [
+  10000,
+  20000
+ ],
+ "scheduler": "LinearWarmupExponentialDecay",
+ "warmup_steps": 3000,
+ "decay_steps": 500000,
+ "max_epoch": 300,
+ "grad_clip": true,
+ "max_grad": 100,
+ "max_lr": 0.001,
+ "decay_rate": 0.01,
+ "ema_decay": 0.95,
+ "reduce_factor": 0.7,
+ "patience": 3,
+ "bde_all": true,
+ "num_thread": 4
+}
